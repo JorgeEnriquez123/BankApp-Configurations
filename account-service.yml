@@ -1,12 +1,5 @@
 spring:
-  application:
-    name: account-service
   data:
     mongodb:
       uri: mongodb://localhost:27017
       database: account
-
-server:
-  port: 8081
-  error:
-    include-message: always
