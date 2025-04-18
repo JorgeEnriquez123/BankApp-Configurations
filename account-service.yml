@@ -12,6 +12,12 @@ resilience4j:
         waitDurationInOpenState: 15s
         slidingWindowSize: 20
         minimumNumberOfCalls: 10
+        record-exceptions:
+          - java.io.IOException
+          - org.springframework.web.reactive.function.client.WebClientResponseException$InternalServerError
+          - org.springframework.web.reactive.function.client.WebClientResponseException$BadGateway
+          - org.springframework.web.reactive.function.client.WebClientResponseException$ServiceUnavailable
+          - org.springframework.web.reactive.function.client.WebClientResponseException$GatewayTimeout
         ignore-exceptions:
           - org.springframework.web.server.ResponseStatusException
           - org.springframework.web.reactive.function.client.WebClientResponseException$NotFound
