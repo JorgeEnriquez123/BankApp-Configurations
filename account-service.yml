@@ -12,6 +12,10 @@ resilience4j:
         waitDurationInOpenState: 15s
         slidingWindowSize: 20
         minimumNumberOfCalls: 10
+        ignore-exceptions:
+          - org.springframework.web.server.ResponseStatusException
+          - org.springframework.web.reactive.function.client.WebClientResponseException$NotFound
+          - org.springframework.web.reactive.function.client.WebClientResponseException$BadRequest
   timelimiter:
     instances:
       default:
