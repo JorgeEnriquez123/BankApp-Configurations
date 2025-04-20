@@ -11,3 +11,7 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: false
+
+web:
+  baseurl:
+    customerservice: http://localhost:8080
