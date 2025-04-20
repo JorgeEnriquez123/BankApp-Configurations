@@ -3,7 +3,16 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: account
-      
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
 eureka:
   instance:
     host: localhost
@@ -23,3 +32,9 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s
+       
+web:
+  baseurl:
+    creditservice: http://localhost:8083
+    customerservice: http://localhost:8080/customers
+    transactionservice: http://localhost:8082/transactions
