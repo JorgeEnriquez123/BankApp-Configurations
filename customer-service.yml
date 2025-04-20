@@ -23,3 +23,8 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s
+ 
+application:
+  jwt:
+    key: brXzPetE8ivZhetRar0MW47UcUJg8GL5hdmnSvFk2nYQdxSWkLZHLWUftkzKaPyA
+    expiration: 900000 # 15 minutes
