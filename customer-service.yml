@@ -4,6 +4,13 @@ spring:
       uri: mongodb://localhost:27017
       database: customer
 
+eureka:
+  instance:
+    host: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
 resilience4j:
   circuitbreaker:
     instances:

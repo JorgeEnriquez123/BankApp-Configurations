@@ -3,3 +3,9 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: transaction
+eureka:
+  instance:
+    host: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
