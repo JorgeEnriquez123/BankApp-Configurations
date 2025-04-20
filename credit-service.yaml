@@ -23,3 +23,9 @@ resilience4j:
     instances:
       default:
         timeout-duration: 2s
+
+web:
+  baseurl:
+    accountservice: http://localhost:8081
+    customerservice: http://localhost:8080/customers
+    transactionservice: http://localhost:8082
