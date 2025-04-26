@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017
-      database: yanki
+      database: bootcoin
     redis:
       host: localhost
       port: 6379
